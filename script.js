@@ -1,18 +1,18 @@
 // Display Color Per Current Time
 // getHoursfromMoment.js
 console.log(moment().hour())
-console.log(document.querySelector("#hour-1").children[0].getAttribute("value"))
+console.log($(".hour").attr("value"))
 var currentHour = moment().hour()
 console.log(currentHour)
-// displayColorfunction
+// Display Color function
 function displayColor(e){
-  if (document.querySelector(e).children[0].getAttribute("value")==currentHour){
+  if ($(e).children().attr("value")==currentHour){
     
     $(e).find("textarea").addClass("present");
     
   }
 
-  else if (document.querySelector(e).children[0].getAttribute("value")<currentHour){
+  else if ($(e).children().attr("value")<currentHour){
     $(e).find("textarea").addClass("past");
   }                 
   else($(e).find("textarea").addClass("future"))
@@ -54,29 +54,29 @@ function renderTextInput(){
  document.querySelector("#text-2").textContent = userNote2;
  document.querySelector("#text-1").textContent = userNote1;
 
- 
+ console.log($("#text-9").text())
 
 
 }
 renderTextInput()
 
 // Add event listener to Save Button
-function storageInput(textareaId){
+function storageInput(){
 
   $(".saveBtn").on("click", function(event){
   event.preventDefault();
-  var userInput1 = document.querySelector("#text-9").value;
-  var userInput2 = document.querySelector("#text-8").value;
-  var userInput3 = document.querySelector("#text-7").value;
-  var userInput4 = document.querySelector("#text-6").value;
-  var userInput5 = document.querySelector("#text-5").value;
-  var userInput6 = document.querySelector("#text-4").value;
-  var userInput7 = document.querySelector("#text-3").value;
-  var userInput8 = document.querySelector("#text-2").value;
-  var userInput9 = document.querySelector("#text-1").value;
+  var userInput1 = $("#text-9").val();
+  var userInput2 = $("#text-8").val();
+  var userInput3 = $("#text-7").val();
+  var userInput4 = $("#text-6").val();
+  var userInput5 = $("#text-5").val();
+  var userInput6 = $("#text-4").val();
+  var userInput7 = $("#text-3").val();
+  var userInput8 = $("#text-2").val();
+  var userInput9 = $("#text-1").val();
 
 
-  
+//   Storage User Input
   localStorage.setItem("text-9", userInput1);
   localStorage.setItem("text-8", userInput2);
   localStorage.setItem("text-7", userInput3);
@@ -96,7 +96,7 @@ function storageInput(textareaId){
 
 }
 
-
+// Run Through Each Text Block
 storageInput("#text-9")
 storageInput("#text-8")
 storageInput("#text-7")
