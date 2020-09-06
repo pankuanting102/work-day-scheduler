@@ -1,9 +1,11 @@
-// Display Color Per Current Time
+// Display Color Per Current Time and Day of Week
 // getHoursfromMoment.js
 console.log(moment().hour())
 console.log($(".hour").attr("value"))
 var currentHour = moment().hour()
+var currentDay = moment().format("[Today is] dddd")
 console.log(currentHour)
+console.log(currentDay)
 // Display Color function
 function displayColor(e){
   if ($(e).children().attr("value")==currentHour){
@@ -42,7 +44,6 @@ function renderTextInput(){
  var userNote3 = localStorage.getItem("text-3")
  var userNote2 = localStorage.getItem("text-2")
  var userNote1 = localStorage.getItem("text-1")
-
  
  document.querySelector("#text-9").textContent = userNote9;
  document.querySelector("#text-8").textContent = userNote8;
@@ -53,9 +54,6 @@ function renderTextInput(){
  document.querySelector("#text-3").textContent = userNote3;
  document.querySelector("#text-2").textContent = userNote2;
  document.querySelector("#text-1").textContent = userNote1;
-
- console.log($("#text-9").text())
-
 
 }
 renderTextInput()
@@ -86,10 +84,7 @@ function storageInput(){
   localStorage.setItem("text-3", userInput7);
   localStorage.setItem("text-2", userInput8);
   localStorage.setItem("text-1", userInput9);
- 
   
-
-  renderTextInput()
   
   
 })
@@ -106,3 +101,32 @@ storageInput("#text-4")
 storageInput("#text-3")
 storageInput("#text-2")
 storageInput("#text-1")
+
+
+// Display Current Day
+function displayCurrentDay(){
+    document.getElementById("currentDay").textContent= currentDay
+}
+
+displayCurrentDay()
+
+// //Save Message
+function displaySaveMessage(){
+    $(".saveBtn").on("click", function(){
+
+        setTimeout(function(){
+            var saveMsg = $("<div>").text("Your Schedule is Saved!")
+            saveMsg.addClass("savemessage")
+            $(".container").append(saveMsg)
+            $(".savemessage").fadeIn(400);
+            $(".savemessage").fadeOut(800);
+            setTimeout(function(){
+                $(".savemessage").remove();
+              }, 1200);
+            
+              
+ 
+        });
+    })
+}
+displaySaveMessage()
