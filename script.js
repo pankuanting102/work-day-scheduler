@@ -3,7 +3,7 @@
 console.log(moment().hour())
 console.log($(".hour").attr("value"))
 var currentHour = moment().hour()
-var currentDay = moment().format("[Today is] dddd")
+var currentDay = moment().format("dddd, MMMM Do YYYY")
 console.log(currentHour)
 console.log(currentDay)
 // Display Color function
