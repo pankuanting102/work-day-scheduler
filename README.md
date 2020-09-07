@@ -7,4 +7,5 @@ I've used JQuery and moment.js api to construct javascript. In addition to the b
 <br><b>Deployed Application</b> 
 <br>https://pankuanting102.github.io/work-day-scheduler/
 <div style="width: 80vw margin: auto">
-![](https://github.com/pankuanting102/work-day-scheduler/blob/master/Assets/screenshot.gif?raw=true)
+<img src="https://github.com/pankuanting102/work-day-scheduler/blob/master/Assets/screenshot.gif">
+</div>
