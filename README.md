@@ -7,3 +7,4 @@ I've used JQuery and moment.js api to construct javascript. In addition to the b
 <br><b>Deployed Application</b> 
 <br>https://pankuanting102.github.io/work-day-scheduler/
 
+<br>![](screenshot.gif)
