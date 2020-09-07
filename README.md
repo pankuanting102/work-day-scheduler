@@ -6,6 +6,6 @@ I've used JQuery and moment.js api to construct javascript. In addition to the b
 <br>https://github.com/pankuanting102/work-day-scheduler
 <br><b>Deployed Application</b> 
 <br>https://pankuanting102.github.io/work-day-scheduler/
-<div style="width: 80vw margin: auto">
+<div style="width: 90vw margin: auto border: 1px black solid">
 <img src="https://github.com/pankuanting102/work-day-scheduler/blob/master/Assets/screenshot.gif">
 </div>
