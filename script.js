@@ -45,16 +45,15 @@ function renderTextInput(){
  var userNote2 = localStorage.getItem("text-2")
  var userNote1 = localStorage.getItem("text-1")
  
- document.querySelector("#text-9").textContent = userNote9;
- document.querySelector("#text-8").textContent = userNote8;
- document.querySelector("#text-7").textContent = userNote7;
- document.querySelector("#text-6").textContent = userNote6;
- document.querySelector("#text-5").textContent = userNote5;
- document.querySelector("#text-4").textContent = userNote4;
- document.querySelector("#text-3").textContent = userNote3;
- document.querySelector("#text-2").textContent = userNote2;
- document.querySelector("#text-1").textContent = userNote1;
-
+ $("#text-9").text(userNote9)
+ $("#text-8").text(userNote8)
+ $("#text-7").text(userNote7)
+ $("#text-6").text(userNote6)
+ $("#text-5").text(userNote5)
+ $("#text-4").text(userNote4)
+ $("#text-3").text(userNote3)
+ $("#text-2").text(userNote2)
+ $("#text-1").text(userNote1)
 }
 renderTextInput()
 
@@ -105,7 +104,7 @@ storageInput("#text-1")
 
 // Display Current Day
 function displayCurrentDay(){
-    document.getElementById("currentDay").textContent= currentDay
+    $("#currentDay").text(currentDay)
 }
 
 displayCurrentDay()
